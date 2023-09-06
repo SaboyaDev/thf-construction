@@ -1,0 +1,28 @@
+---
+import NavLinks from './NavLinks.astro'
+import CallToActionBtn from './CallToActionBtn.astro'
+import HamburgerBtn from './HamburgerBtn.astro'
+import Logo from './Logo.astro'
+import MobileMenu from './MobileMenu.astro'
+---
+
+<nav class='bg-white fixed top-0 left-0 w-full z-50 border-b-[1px] border-[#D7D8D9]'>
+	<!-- Inner Nav Container -->
+	<div class='mx-auto  px-4 sm:px-6 lg:px-8 '>
+		<!-- Outer Flex Container -->
+		<div class='flex items-center justify-between flex-wrap h-[100px]'>
+			<!-- Left Side (Hamburger + Logo) -->
+			<div class='flex items-center space-x-4 md:space-x-0'>
+				<HamburgerBtn />
+				<Logo />
+			</div>
+
+			<NavLinks />
+
+			<CallToActionBtn />
+
+		</div>
+
+		<MobileMenu />
+	</div>
+</nav>
