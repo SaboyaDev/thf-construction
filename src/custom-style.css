@@ -2,21 +2,41 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  body {
+    font-family: "Poppins", Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+  }
+  a {
+    font-size: 15px;
+
+    font-weight: 400;
+  }
+}
+
+@layer components {
+  .clip-path {
+    clip-path: polygon(0 0, 750px 0%, 470px 100%, 0% 100%);
+  }
+}
+
+
 .slider {
   background: white;
-  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
+  /* box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125); */
   height: 100%;
   /* margin: auto; */
   /* padding: 20px 0; */
   overflow: hidden;
   position: relative;
 }
-.slider::before, .slider::after {
+/* .slider::before, .slider::after {
   background: linear-gradient(to right, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 100%);
   content: "";
-  height: 270px;
+  height: 572px;
   position: absolute;
-  width: 144px;
+  width: 100px;
   z-index: 2;
 }
 .slider::after {
@@ -27,22 +47,20 @@
 .slider::before {
   left: 0;
   top: 0;
-}
+} */
 .slider .slide-track {
-  animation: scroll 100s linear infinite;
+  animation: scroll 150s linear infinite;
   display: flex;
-  flex-wrap: wrap;
-  width: calc(2 * 3900px);
+  /* width: calc(2 * 3900px); */
 }
 .slider .slide {
   height: 270px;
   width: 380px;
-  margin: 0 5px;
+  margin: 0 8px;
   position: relative;
-  border-radius: 10px;
+  border-radius: 6px;
   overflow: hidden;
-  /* padding: 10px 0; */
-}/*# sourceMappingURL=style.css.map */
+}
 
 .slider .slide img{
   object-fit: cover;
@@ -60,12 +78,18 @@
   }
 
   100% {
-    transform: translateX(-2900px);
+    transform: translateX(-3900px);
   }
 }
 
-@layer components {
-  .clip-path {
-    clip-path: polygon(0 0, 750px 0%, 470px 100%, 0% 100%);
-  }
+.inner-hero-content {
+  left: calc(50% - 580px);
+}
+
+.bottom-box-shadow {
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
+}
+
+.bg-extension {
+  width: calc(50% - 280px);
 }
