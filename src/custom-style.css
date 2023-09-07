@@ -31,6 +31,7 @@
 .slider .slide-track {
   animation: scroll 100s linear infinite;
   display: flex;
+  flex-wrap: wrap;
   width: calc(2 * 3900px);
 }
 .slider .slide {

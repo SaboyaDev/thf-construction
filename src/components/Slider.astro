@@ -3,8 +3,8 @@ import imageList from '../data/images.json'
 const doubledList = imageList.concat(imageList)
 ---
 
-<div class='slider ml-auto w-3/5 px-4 sm:px-6 lg:px-8'>
-	<div class='slide-track h-[556px]'>
+<div class='flex flex-wrap slider ml-auto w-3/5 px-4 sm:px-6 lg:px-8'>
+	<div class='slide-track'> <!-- h-[556px] -->
 		{
 			doubledList.map(image => (
 				<div class='slide'>
