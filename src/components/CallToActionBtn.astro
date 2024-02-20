@@ -1,13 +1,13 @@
 ---
-
+const {content, icon, color, hoverColor} = Astro.props
 ---
 
 <div class='flex-shrink-0'>
 	<button
 		type='button'
-		class='relative inline-flex items-center gap-x-1.5 rounded-md bg-orange-500 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-orange-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-500'
+		class=`relative inline-flex items-center gap-x-1.5 rounded-md ${color} px-3 py-2 text-sm font-semibold text-white shadow-sm hover:${hoverColor}focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-500`
 	>
-		Contact Us
-		<span class='material-symbols-outlined'> phone_iphone</span>
+		{content}
+    <span class="material-symbols-outlined">{icon}</span>
 	</button>
 </div>
