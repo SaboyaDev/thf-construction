@@ -1,5 +1,5 @@
 ---
-
+import ServiceCard from "./ServiceCard.astro";
 ---
 
 <section class="bg-light-gray flex flex-col py-16 items-center">
@@ -8,41 +8,10 @@
             class="text-orange-500">transform</span>
         your home.</h4>
     <section class="w-full flex flex-wrap flex-row justify-center gap-10">
-        <a class="basis-[190px] bg-white rounded-lg flex-initial" href="#">
-            <img class="w-full" src="src/images/carousel/02-slide.jpg"/>
-            <div class="flex flex-row justify-between p-5">
-                <p class="">Kitchens</p>
-                <span class='material-symbols-outlined'> arrow_forward</span>
-            </div>
-        </a>
-        <a class="basis-[190px] bg-white rounded-lg flex-initial" href="#">
-            <img class="w-full" src="src/images/carousel/09-slide.jpg"/>
-            <div class="flex flex-row justify-between p-5">
-                <p class="">Basements</p>
-                <span class='material-symbols-outlined'> arrow_forward</span>
-            </div>
-        </a>
-        <a class="basis-[190px] bg-white rounded-lg flex-initial" href="#">
-            <img class="w-full" src="src/images/carousel/07-slide.jpg"/>
-            <div class="flex flex-row justify-between p-5">
-                <p class="">Bathrooms</p>
-                <span class='material-symbols-outlined'> arrow_forward</span>
-            </div>
-
-        </a>
-        <a class="basis-[190px] bg-white rounded-lg flex-initial" href="#">
-            <img class="w-full" src="src/images/carousel/03-slide.jpg"/>
-            <div class="flex flex-row justify-between p-5">
-                <p class="">Media Rooms</p>
-                <span class='material-symbols-outlined'> arrow_forward</span>
-            </div>
-        </a>
-        <a class="basis-[190px] bg-white rounded-lg flex-initial" href="#">
-            <img class="w-full" src="src/images/carousel/01-slide.jpg"/>
-            <div class="flex flex-row justify-between p-5">
-                <p class="">Full Renovations</p>
-                <span class='material-symbols-outlined'> arrow_forward</span>
-            </div>
-        </a>
+        <ServiceCard title="Kitchens" imageUrl="src/images/carousel/02-slide.jpg" link="#"/>
+        <ServiceCard title="Basements" imageUrl="src/images/carousel/09-slide.jpg" link="#"/>
+        <ServiceCard title="Bathrooms" imageUrl="src/images/carousel/07-slide.jpg" link="#"/>
+        <ServiceCard title="Media Rooms" imageUrl="src/images/carousel/03-slide.jpg" link="#"/>
+        <ServiceCard title="Full Renovations" imageUrl="src/images/carousel/01-slide.jpg" link="#"/>
     </section>
 </section>
