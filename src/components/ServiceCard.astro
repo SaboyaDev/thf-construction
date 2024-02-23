@@ -4,7 +4,7 @@ const {link} = Astro.props;
 const {imageUrl} = Astro.props;
 ---
 
-<a class="basis-[190px] bg-white rounded-lg flex-initial" href={link}>
+<a class="basis-[190px] bg-white rounded-lg flex-initial shadow-lg" href={link}>
     <img class="w-full" src={imageUrl}/>
     <div class="flex flex-row justify-between p-5">
         <p class="">{title}</p>
