@@ -1,0 +1,22 @@
+---
+import TestimonialCard from "./TestimonialCard.astro";
+---
+
+<section class="bg-light-gray flex flex-col py-16 items-center">
+    <h3 class="uppercase tracking-widest text-neutral-500 text-lg mb-3 ">Testimonials</h3>
+    <h4 class="text-xs sm:text-lg md:text-2xl lg:text-3xl font-bold w-1/3 text-center mb-6">What our clients are
+        saying:</h4>
+    <p class="text-xs md:text-lg lg:text-xl w-4/5 text-center">Our clients rave about their experiences working with us because we always strive for perfection, but don't take
+        our word for it:</p>
+    <section class="w-3/4 my-10 flex gap-7 flex-wrap flex-row justify-evenly">
+        <TestimonialCard
+                review="This is the best company I have ever worked with. The level of professionalism and dedication to customer satisfaction is unmatched. I highly recommend their services."
+                name="Rogelio Mitre" description="Web Developer - THF"/>
+        <TestimonialCard
+                review="I am incredibly impressed with the quality of products and services provided by this company. Their attention to detail and commitment to excellence shine through in every interaction. It's been a pleasure doing business with them."
+                name="Samantha Chen"/>
+        <TestimonialCard
+                review="I can't speak highly enough about this company. From start to finish, they exceeded all expectations, delivering exceptional results in a timely manner. Look no further for top-notch service and reliability."
+                name="Jameson Patel"/>
+    </section>
+</section>
