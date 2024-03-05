@@ -19,3 +19,8 @@ pnpm-debug.log*
 
 # macOS-specific files
 .DS_Store
+/.idea/.idea.thf-construction.dir/.idea/.gitignore
+/.idea/.idea.thf-construction.dir/.idea/encodings.xml
+/.idea/.idea.thf-construction.dir/.idea/indexLayout.xml
+/package-lock.json
+/.idea/.idea.thf-construction.dir/.idea/vcs.xml
