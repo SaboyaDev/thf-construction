@@ -1,13 +1,14 @@
 ---
-const {content, icon, color, hoverColor} = Astro.props
+const { content, icon, color, hoverColor } = Astro.props;
 ---
 
-<div class='flex-shrink-0'>
-	<button
-		type='button'
-		class=`relative inline-flex items-center gap-x-1.5 rounded-md ${color} px-3 py-2 text-sm font-semibold text-white shadow-sm hover:${hoverColor}focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-500`
-	>
-		{content}
-    <span class="material-symbols-outlined">{icon}</span>
-	</button>
+<div class="flex-shrink-0">
+  <button
+    type="button"
+    class=`relative inline-flex items-center gap-x-1.5 rounded-md px-4 py-2 font-semibold text-white ${color} hover:${hoverColor} shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-500`
+  >
+    {content}
+    {icon && <span class="material-symbols-outlined text-[22px]">{icon}</span>}
+    <slot />
+  </button>
 </div>
