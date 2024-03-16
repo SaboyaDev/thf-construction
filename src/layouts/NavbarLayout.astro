@@ -1,12 +1,17 @@
 ---
-
+import MobileMenu from '../components/MobileMenu.astro'
 ---
 
-<nav
-  class="fixed left-0 top-0 z-50 w-full border-b-[1px] border-[#D7D8D9] bg-white"
->
-  <!-- Inner Nav Container -->
-  <div class="mx-auto px-4 sm:px-6 lg:px-8">
-    <slot />
-  </div>
-</nav>
+<div>
+
+  <nav
+  class="sticky left-0 top-0 z-50 border-b-[1px] border-[#D7D8D9] bg-white"
+  >
+    <!-- Inner Nav Container -->
+    <div class="mx-auto px-4 sm:px-6 lg:px-8">
+      <slot />
+    </div>
+
+    <MobileMenu />
+  </nav>
+</div>

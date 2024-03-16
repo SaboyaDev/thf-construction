@@ -2,18 +2,20 @@
 const links = ['Home', 'Services', 'Gallery', 'About', 'FAQ']
 ---
 
-<div class='hidden md:flex md:items-center md:justify-center md:flex-grow-1'>
+<div class='hidden lg:flex lg:items-center lg:justify-center lg:flex-grow-1'>
 	<!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
 
 	{
 		links.map(link => (
-			<a
-				href='#'
-				class=' text-metallic mx-2 px-3 py-2 box-border'
-				aria-current='page'
-			>
-				{link}
-			</a>
+			<li class="list-none">
+          <a
+				  href='#'
+				  class=' text-metallic mx-2 px-3 py-2 box-border'
+				  aria-current='page'
+			  >
+				  {link}
+			  </a>
+      </li>
 		))
 	}
 </div>
