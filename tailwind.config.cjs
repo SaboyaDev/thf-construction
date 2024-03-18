@@ -2,10 +2,6 @@
 module.exports = {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	theme: {
-		colors: {
-			black: '#20262E',
-			white: '#FFFFFF',
-		},
 		extend: {
 			colors: {
 				main: '#F58634',
@@ -16,6 +12,15 @@ module.exports = {
 				gray: '#929CA6',
 				'light-gray': '#F0F1F2',
 				'egg-white': '#F7F9FA',
+			},
+			animation: {
+				'img-slider': 'img-slider 150s linear infinite',
+			},
+			keyframes: {
+				'img-slider': {
+					'0%': { transform: 'translateX(0)' },
+					'100%': { transform: 'translateX(-3900px)' },
+				},
 			},
 		},
 	},

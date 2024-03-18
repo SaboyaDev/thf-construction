@@ -1,8 +1,16 @@
 ---
-const { content, icon, color} = Astro.props;
+const { content, icon, color, hidden} = Astro.props;
 ---
-
-<div class="hidden sm:block flex-shrink-0">
+{ hidden ?
+  (<div class:list={[`${hidden}`, "sm:block flex-shrink-0"]}>
+    <button
+      type="button"
+      class:list={["relative inline-flex items-center gap-x-1.5 rounded-md px-4 py-3 text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-500", `${color}`]}
+    >
+      {content}
+      {icon && <span class="material-symbols-outlined text-[22px]">{icon}</span>}
+    </button>
+  </div>) : (<div class="sm:block flex-shrink-0">
   <button
     type="button"
     class:list={["relative inline-flex items-center gap-x-1.5 rounded-md px-4 py-3 text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-500", `${color}`]}
@@ -10,4 +18,5 @@ const { content, icon, color} = Astro.props;
     {content}
     {icon && <span class="material-symbols-outlined text-[22px]">{icon}</span>}
   </button>
-</div>
+</div>)
+}
