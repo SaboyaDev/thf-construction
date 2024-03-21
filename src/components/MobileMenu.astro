@@ -1,29 +1,22 @@
 ---
-
+const links = ['Home', 'Services', 'Gallery', 'About', 'FAQ']
 ---
 
-<div class='hidden' id='mobile-menu'>
-	<div class='space-y-1 px-2 pb-3 pt-2 sm:px-3'>
-		<!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-		<a
-			href='#'
-			class='text-dark-gray hover:bg-blk hover:text-white block rounded-md px-3 py-2 text-base font-medium'
-			aria-current='page'>Home</a
-		>
-		<a
-			href='#'
-			class='text-dark-gray hover:bg-blk hover:text-white block rounded-md px-3 py-2 text-base font-medium'
-			>Services</a
-		>
-		<a
-			href='#'
-			class='text-dark-gray hover:bg-blk hover:text-white block rounded-md px-3 py-2 text-base font-medium'
-			>Gallery</a
-		>
-		<a
-			href='#'
-			class='text-dark-gray hover:bg-blk hover:text-white block rounded-md px-3 py-2 text-base font-medium'
-			>About</a
-		>
-	</div>
+<div class="hidden absolute w-full" id='mobile-menu'>
+
+  <div class='bg-gradient-to-b from-main to-[#f7ad78]' >
+  	<div class='space-y-1' >
+      {links.map(link => (
+          <li class="list-none pl-4 sm:pl-6 py-4 drop-shadow-2xl">
+            <a
+        			href='#'
+        			class=' text-xl text-light-gray font-semibold'
+        			aria-current='page'>{link}
+            </a>
+          </li>
+        ))
+  		}
+  	</div>
+  </div>
 </div>
+

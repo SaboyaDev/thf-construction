@@ -1,12 +1,17 @@
 ---
-import HeroContent from './HeroContent.astro'
-import Slider from './Slider.astro'
+import HeroContent from "./HeroContent.astro";
+import Slider from "./Slider.astro";
 ---
 
-<!-- style="background-image: url('/src/images/kitchen.jpg');" -->
-<!-- <section class='relative flex w-full mx-auto mt-[100px] overflow-hidden'> -->
-<section class='relative bg-center bg-cover flex w-full mx-auto mt-[100px]'>
-    <div class='bg-extension h-full bg-light-gray absolute z-[1] l-0'></div>
-    <HeroContent/>
-    <Slider/>
+<!-- <section class='relative flex sm:w-full sm:mx-auto'> -->
+<section
+  class="flex flex-col-reverse overflow-hidden sm:relative sm:mx-auto sm:w-full sm:flex-row"
+>
+  <!-- Complements the Design, Gray block to the left of the hero content -->
+  <div
+    class="bg-extension hidden sm:absolute sm:left-0 sm:block sm:h-full sm:bg-light-gray"
+  >
+  </div>
+  <HeroContent />
+  <Slider />
 </section>

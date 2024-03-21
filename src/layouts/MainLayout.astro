@@ -16,11 +16,11 @@ import Footer from "../components/Footer.astro";
     </title>
     <HeadTagContent />
   </head>
-  <body class="bg-white">
+  <body class="bg-white relative">
+    <div class="overlay hidden absolute top-0 left-0 w-full h-full bg-black/25 z-50" id=""></div>
     <Navbar />
     <slot />
     <Footer />
-    <div class="empty h-screen"></div>
     <script src="../scripts/mobile-menu.js"></script>
     <script src="../scripts/types.js"></script>
   </body>

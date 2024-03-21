@@ -1,27 +1,21 @@
 ---
-import NavLinks from './NavLinks.astro'
-import CTAButton from "./CallToActionBtn.astro"
-import HamburgerBtn from './HamburgerBtn.astro'
-import Logo from './Logo.astro'
-import MobileMenu from './MobileMenu.astro'
+import NavLinks from "./NavLinks.astro";
+import CTAButton from "./CallToActionBtn.astro";
+import HamburgerBtn from "./HamburgerBtn.astro";
+import Logo from "./Logo.astro";
 import NavbarLayout from "../layouts/NavbarLayout.astro";
 ---
 
 <NavbarLayout>
-  <!-- Outer Flex Container -->
-	<div class='flex items-center justify-between flex-wrap h-[100px]'>
-		<!-- Left Side (Hamburger + Logo) -->
-		<div class='flex items-center space-x-4 md:space-x-0'>
-			<HamburgerBtn />
-			<Logo />
-		</div>
-
-		<NavLinks />
-
-		<CTAButton content="Start Your Project" icon="arrow_right_alt" color="bg-main"/>
-
-	</div>
-
-	<MobileMenu />
-
+  <div class="flex h-[100px] items-center gap-3 lg:justify-between">
+    <Logo />
+    <NavLinks />
+    <CTAButton
+      content="Start Your Project"
+      icon="arrow_right_alt"
+      color="bg-main"
+      hidden="hidden"
+    />
+    <HamburgerBtn />
+  </div>
 </NavbarLayout>
