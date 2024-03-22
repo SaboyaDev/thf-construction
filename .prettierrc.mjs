@@ -9,6 +9,7 @@ export default {
         "parser": "astro"
       }
     }
-  ]
+  ],
+   "pluginSearchDirs": false
 };
 
